@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:black;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,13 +21,19 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+ display:block;
+ z-index: 4;
+ background-image:url('src/venus.png');
+  height:50px;
+  width: 50px;
   position:absolute;
 }
 .lineDancer{
-  background-color: blue;
-  height: 30px;
-  width: 15px;
   position:absolute;
+/*  display: block;*/
+  z-index: 4;
+  background-image: url('src/rocketship.png');
+  height: 375px;
+  width: 206px;
+
 }
