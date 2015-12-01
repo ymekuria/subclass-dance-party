@@ -22,3 +22,13 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
     };
     this.$node.css(styleSettings);
   };
+  MakeDancer.prototype.lineUp = function() {
+
+
+  var myStyle = {
+   left: 50
+  };
+  this.$node.css(myStyle);
+
+
+};

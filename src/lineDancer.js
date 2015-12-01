@@ -1,7 +1,8 @@
 var MakeLineDancer = function(top, left, timeBetweenSteps) {
    MakeDancer.call(this,top, left, timeBetweenSteps);
    this.$node.removeClass().addClass("lineDancer");
-   console.log('Top', top, 'left', left, 'timeBetweenSteps', timeBetweenSteps);
+   dancers.push(this);
+   
 }
 MakeLineDancer.prototype = Object.create(MakeDancer.prototype);
 
@@ -14,14 +15,29 @@ MakeLineDancer.prototype.step = function() {
 console.log($("body").height())
   if(myTop > 0) {
   var newTop = myTop - 40;
+  var myStyle = {
+      top:newTop
+    };
+    this.$node.css(myStyle);
 } else { 
-  newTop = $("body").height();
+  this.$node.removeClass().addClass("explode");
+ 
+  var that = this;
+  setTimeout(function(){
+    
+    that.$node.removeClass().addClass("lineDancer");
+    newTop = $("body").height();
+    var myStyle = {
+      top:newTop
+    };
+    that.$node.css(myStyle);
+  },800)
+  
+
 
 } 
-  var myStyle = {
-   top:newTop
-  };
-  this.$node.css(myStyle);
-};
+
+
+}
 
 
