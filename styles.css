@@ -11,9 +11,32 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .addLineDancerButton, .lineUpDancerButton{
+.title{
   padding:5px 12px;
   float:right;
+}
+.addLineDancerButton, .addDancerButton, .lineUpDancerButton, .addAsteroidButton{
+ /* border-style:solid;*/
+  /*box-sizing: border-box;*/
+  border-width:2px;
+  font-family: 'Bowlby One', cursive;
+  /*border-color: white;*/
+  width:100px;
+  margin-top: 3px;
+  float:right;
+  border-radius: 10px;
+  background-color:red;
+  color:white; 
+  text-decoration: none;
+ }
+.addDancerButton, .lineUpDancerButton, .addAsteroidButton{
+  color:white ; 
+  background-color:black;
+  text-decoration: none;
+ }
+.addDancerButton {
+  background-color: gold;
+  
 }
 .topbar{
   height:32px;
@@ -26,8 +49,8 @@ body, a:link, a:visited, a:active{
  display:block;
  z-index: 4;
  background-image:url('src/venus.png');
-  height:50px;
-  width: 50px;
+  height:227px;
+  width: 200px;
   position:absolute;
 }
 

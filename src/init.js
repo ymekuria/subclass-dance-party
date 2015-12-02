@@ -49,12 +49,25 @@ $(".addLineDancerButton").on("click", function(event) {
   });
 
 //Mouseover
- $('body').on("mouseover", '.lineDancer', function() {
+ $('body').on("mouseover", '.lineDancer', function(event) {
   $( this ).animate({ "top": "-=1150px" }, "fast" );
   
       
 
   });
+//add asteroid
+$(".addAsteroidButton").on("click", function(event) {
+  console.log("event variable,", event);
+    var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
 
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    var dancer = new dancerMakerFunction(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+    );
+  
+    $('body').append(dancer.$node);
+  });
 });
 
