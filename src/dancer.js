@@ -1,5 +1,4 @@
 var MakeDancer = function(top, left, timeBetweenSteps) {
-  var colorArray = [];
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();

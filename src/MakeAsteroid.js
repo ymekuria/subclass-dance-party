@@ -1,6 +1,8 @@
-var MakeAsteroid = function(){
+var MakeAsteroid = function(top, left){
   this.$node = $('<span class="asteroid"></span>');
-  dancers.push(this);
+  //dancers.push(this);
+  var top = this.top;
+  var left = this.left;
   this.setPosition();
 };
 
