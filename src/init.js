@@ -64,10 +64,35 @@ $(".addAsteroidButton").on("click", function(event) {
 
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $("body").width() * Math.random()
     );
   
     $('body').append(dancer.$node);
   });
+
+$(document).keydown(function(e){
+    switch (e.which){
+    case 37:    //left arrow key
+        $(".asteroid").finish().animate({
+            left: "-=30"
+        });
+        break;
+    case 38:    //up arrow key
+        $(".asteroid").finish().animate({
+            top: "-=30"
+        });
+        break;
+    case 39:    //right arrow key
+        $(".asteroid").finish().animate({
+            left: "+=30"
+        });
+        break;
+    case 40:    //bottom arrow key
+        $(".asteroid").finish().animate({
+            top: "+=30"
+        });
+        break;
+    }
+});
 });
 
